@@ -1,0 +1,38 @@
+﻿<Window x:Class="BitLockerUtility.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:BitLockerUtility"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="500" Width="800">
+    <Grid x:Name="DiskList">
+        <Button x:Name="ListVolumes" Content="List Volumes" HorizontalAlignment="Left" Margin="26,29,0,0" VerticalAlignment="Top" Click="Button_Click"/>
+        <ListBox x:Name="ListOfVolumes" d:ItemsSource="{d:SampleData ItemCount=5}" Margin="26,65,442,217" SelectionChanged="ListDisk_SelectionChanged"/>
+        <PasswordBox x:Name="PasswordTextBox" HorizontalAlignment="Left" Margin="614,321,0,0" VerticalAlignment="Top" Width="120"/>
+        <PasswordBox x:Name="ConfirmPasswordTextBox" HorizontalAlignment="Left" Margin="614,363,0,0" VerticalAlignment="Top" Width="120"/>
+        <Label x:Name="PasswordLabel" Content="Password" HorizontalAlignment="Left" Margin="438,321,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="ConfirmPasswordLabel" Content="Confirm Password" HorizontalAlignment="Left" Margin="438,363,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="Volume" Content="Volume" HorizontalAlignment="Left" Margin="438,64,0,0" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="BitlockerVolumeTextBox" HorizontalAlignment="Left" Margin="438,95,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" IsEnabled="False"/>
+        <Label x:Name="BitlockerVersion" Content="Version" HorizontalAlignment="Left" Margin="438,120,0,0" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="BitlockerVersionTextBox" HorizontalAlignment="Left" Margin="438,151,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" IsEnabled="False"/>
+        <Button x:Name="SavePasswordChange" Content="Change Password" HorizontalAlignment="Left" Margin="521,430,0,0" VerticalAlignment="Top" Click="ChangePassword_Click" Width="115"/>
+        <Label x:Name="LockedStatus" Content="Locked Status" HorizontalAlignment="Left" Margin="611,64,0,0" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="BitlockerLockedStatusTextBox" HorizontalAlignment="Left" Margin="611,95,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" IsEnabled="False"/>
+        <Label x:Name="KeyProtectorsLabel" Content="Key Protectors" HorizontalAlignment="Left" Margin="611,120,0,0" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="BitlockerProtectorsTextBox" HorizontalAlignment="Left" Margin="611,151,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Height="75"/>
+        <Button x:Name="ChangePassword" Content="Change Password" HorizontalAlignment="Left" Margin="438,247,0,0" VerticalAlignment="Top" Width="120" IsEnabled="False" Click="ChangePassword_Click_1"/>
+        <Button x:Name="ChangePin" Content="Change Pin" HorizontalAlignment="Left" Margin="611,247,0,0" VerticalAlignment="Top" IsDefault="True" Width="120" IsEnabled="False" Click="ChangePin_Click"/>
+        <PasswordBox x:Name="PinTextBox" HorizontalAlignment="Left" Margin="614,321,0,0" VerticalAlignment="Top" Width="120"/>
+        <PasswordBox x:Name="ConfirmPinTextBox" HorizontalAlignment="Left" Margin="614,363,0,0" VerticalAlignment="Top" Width="120"/>
+        <Label x:Name="PinLabel" Content="PIN" HorizontalAlignment="Left" Margin="448,322,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="ConfirmPinLabel" Content="Confirm PIN" HorizontalAlignment="Left" Margin="438,363,0,0" VerticalAlignment="Top"/>
+        <Button x:Name="SavePinChange" Content="Change Pin" HorizontalAlignment="Left" Margin="521,430,0,0" VerticalAlignment="Top" IsEnabled="False" Width="115" Click="SavePinChange_Click"/>
+        <Label x:Name="UnlockWithPassword" Content="Unlock with password" Margin="129,342,0,0" VerticalAlignment="Top" HorizontalAlignment="Left"/>
+        <PasswordBox x:Name="UnlockPassword" Margin="129,381,0,0" VerticalAlignment="Top" Width="120" HorizontalAlignment="Left" ToolTip="Type Password"/>
+        <Button x:Name="UnlockPasswordBtn" Content="Unlock" Margin="150,430,0,0" VerticalAlignment="Top" RenderTransformOrigin="1.769,-0.619" HorizontalAlignment="Left" Width="78" Click="UnlockPassword1_Click"/>
+        <Button x:Name="LockVolumeBtn" Content="Lock Volume" HorizontalAlignment="Left" Margin="26,302,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.616,-0.008" IsEnabled="False" Click="LockVolume_Click"/>
+
+    </Grid>
+</Window>
