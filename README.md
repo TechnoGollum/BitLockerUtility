@@ -1,6 +1,7 @@
 # BitLocker Utility
 
-![image](https://github.com/TechnoGollum/BitLockerUtility/assets/141333180/4e93059e-8a86-44ec-8782-41586d4527f0)
+![image](https://github.com/TechnoGollum/BitLockerUtility/assets/141333180/8a9abd59-547f-436a-8b9f-d18e7eb31e06)
+
 
 Welcome to the BitLocker Utility repository! This utility is designed to provide a simple way to manage BitLocker-encrypted drives, allowing you to conveniently lock and unlock them, and also modify PINs and passwords.
 
